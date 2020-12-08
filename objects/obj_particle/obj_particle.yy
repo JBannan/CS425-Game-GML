@@ -18,7 +18,15 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [],
-  "properties": [],
+  "properties": [
+    {"varType":0,"value":"7.6","rangeEnabled":true,"rangeMin":3.0,"rangeMax":15.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"mass","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":4,"value":"Vector2d(0,0)","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
+        "\"Item 0\"",
+      ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"force","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":4,"value":"Vector2d(0,0)","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"pos","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":4,"value":"Vector2d(0,0)","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"vel","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"2","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"kfollow","tags":[],"resourceType":"GMObjectProperty",},
+  ],
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
