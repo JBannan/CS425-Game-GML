@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parent_zombie",
+    "path": "objects/obj_parent_zombie/obj_parent_zombie.yy",
+  },
   "physicsObject": true,
   "physicsSensor": false,
   "physicsShape": 0,

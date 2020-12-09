@@ -1,3 +1,5 @@
+
+
 function sb_following_force() {
 	var player = Vector2d(obj_player.x, obj_player.y);
 	var force = Vector2d(0,0);

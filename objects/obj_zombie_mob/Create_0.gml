@@ -6,3 +6,6 @@
 // Initializing position and velocity at start
 pos = Vector2d(x, y);
 vel = Vector2d(phy_speed_x, phy_speed_y);
+
+// Add this to the list of particle zombies
+ds_list_add(obj_controller.particles, id);
