@@ -29,6 +29,7 @@
     {"varType":4,"value":"Vector2d(0,0)","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"pos","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":4,"value":"Vector2d(0,0)","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"vel","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"2","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"kfollow","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"100","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"sight_range","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

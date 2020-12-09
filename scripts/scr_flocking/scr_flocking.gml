@@ -16,15 +16,19 @@ function sb_following_force() {
 
 function sb_flocking_force() {
 	var sepForce, alignForce, cohesiveForce;
-	var neighbors = scr_get_neighbors();
-	/*var neighbors = ds_list_create();
-	with (obj_particle) {
-		if (object_index != obj_particle) {
-			ds_list_add(neighbors, object_index);
-		}
+	var separ = Vector2d(0,0), cohes = Vector2d(0,0), align = Vector2d(0,0);
+	var Xcm = Vector2d(0,0);
+	var sum_wi = 0;
+	var neighbors = scr_get_neighbors(); // List of neighbor zombies in range
+	var nsize = ds_list_size(neighbors);
+	var i;
+	for (i = 0; i < nsize; i++) {
+		var obid = ds_list_find_value(neighbors, i);
+		var n = instance_find(obj_parent_zombie, obid);
+		//var di = vec_subtract(Vector2d(), n.)
+		n.image_xscale += random_range(1, 5);
 	}
-	var thing = ds_list_find_value(neighbors, 0);
-	thing.*/
+	
 }
 
 function compute_force() {
