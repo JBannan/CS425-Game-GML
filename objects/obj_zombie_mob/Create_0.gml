@@ -6,7 +6,9 @@
 // Initializing position and velocity at start
 pos = Vector2d(x, y);
 vel = Vector2d(phy_speed_x, phy_speed_y);
+force = Vector2d(0,0);
 
 // Add this to the list of particle zombies
-
-ds_list_add(variable_global_get(particles), id);
+//ds_list_add(particles, instance_id);
+particles[psize] = id;
+psize++;

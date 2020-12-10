@@ -8,7 +8,7 @@
     "name": "obj_parent_zombie",
     "path": "objects/obj_parent_zombie/obj_parent_zombie.yy",
   },
-  "physicsObject": false,
+  "physicsObject": true,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 1,
