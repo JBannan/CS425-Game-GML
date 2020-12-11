@@ -3,7 +3,7 @@
 globalvar particles, psize;
 globalvar h;
 globalvar k_align, k_coh, k_sep;
-h = room_speed / 60;
+h = 60/room_speed;
 psize = 0;
 particles = array_create(50, -1);
 k_align = 0.1;
@@ -13,16 +13,19 @@ k_sep = 0.3;
 //ds_list_clear(particles);
 
 // States may be relocated
+globalvar state;
 state = {
 	pos : Vector2d(0, 0),
 	vel : Vector2d(0, 0)
 }
 
+globalvar dState;
 dState = {
 	dpos : Vector2d(0, 0),
 	dvel : Vector2d(0, 0),
 }
 
+globalvar new_state;
 new_state = {
 	pos : Vector2d(0,0),
 	vel : Vector2d(0, 0)
@@ -30,7 +33,7 @@ new_state = {
 
 function derive () {
 	dState.dpos = state.vel;
-	dState.dvel = vec_divide(self.force, self.mass);
+	dState.dvel = vec_divide(force, mass);
 }
 
 function euler () {
@@ -38,22 +41,25 @@ function euler () {
 	new_state.vel = vec_add(state.vel, vec_scale(dState.dvel, h));
 }
 
-/// @function
-/// @desc Sets new_state
+
 function ode () {
-	
+	euler();
 }
 
 function step() {
+	force = compute_force();
 	derive();
 	ode();
 }
 
 // Equivalent to MyPhysicsEngine::step(h) for a single boid
 function scr_physics(){
-	state.pos = self.pos;
-	state.vel = self.vel;
+	// Particles to states
+	state.pos = pos;
+	state.vel = vel;
+	
 	step();
-	self.pos = new_state.pos;
-	self.vel = new_state.vel;
+	
+	pos = new_state.pos;
+	vel = new_state.vel;
 }

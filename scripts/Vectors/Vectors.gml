@@ -46,7 +46,7 @@ function vec_subtract(v1, v2) {
 }
 
 function magnitude(vect) {
-	return sqrt((vect[0] * vect[0]) + (vect[1] * vect[1]));
+	return sqrt(sqr(vect[0]) + sqr(vect[1]));
 }
 
 function vec_divide (vect, n) {

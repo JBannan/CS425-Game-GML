@@ -14,17 +14,35 @@ function sb_following_force() {
 	return force;
 }
 
+// Meant to be called by the player to move towards the mouse
+function player_follow_mouse() {
+	var mouse = Vector2d(mouse_x, mouse_y);
+	var force = Vector2d(0,0);
+	var r = 1;
+	var kd = 0.5;
+	var l = vec_subtract(pos, mouse);
+	var ml = magnitude(l);
+	var vl = dot_prod(vel, l);
+	
+	var coeff = -1 * ( (k_follow*(ml - r)) + (kd*(vl/ml)));
+	force = vec_scale(normalize(l), coeff);
+	return force;
+}
+
 function sb_flocking_force() {
 	var sepForce, alignForce, cohesiveForce;
 	var separ = Vector2d(0,0), cohes = Vector2d(0,0), align = Vector2d(0,0);
 	var sum_wi = 0;
 	var neighbors = scr_get_neighbors(); // List of neighbor zombies in range
 	var nsize = array_length(neighbors);
+	if (nsize == 0) {
+		return Vector2d(0,0);
+	}
 	var i;
 	for (i = 0; i < nsize; i++) {
 		// Individual neighbor = n
 		var n = neighbors[i];
-		var di = vec_subtract(self.pos, n.pos);// this->pos.operator(n->pos)
+		var di = vec_subtract(state.pos, n.pos);// this->pos.operator(n->pos)
 		var di_mag = magnitude(di)
 		var Wi = 1 / sqr(di_mag);// 1 / di.normsqr()
 		// Possible Wi limits here
@@ -47,11 +65,16 @@ function sb_flocking_force() {
 	alignForce = vec_divide(alignForce, magnitude(alignForce) + 0.0001);
 	
 	cohes = vec_divide(cohes, nsize);
-	cohesiveForce = vec_subtract(cohes, self.pos);
+	cohesiveForce = vec_subtract(cohes, pos);
 	
 	return vec_add( vec_scale(sepForce, k_sep), vec_add(vec_scale(alignForce, k_align), vec_scale(cohesiveForce, k_coh)) );
 }
 
+function sb_avoidance_force() {
+	
+}
+
 function compute_force() {
-	var followForce = sb_following_force();
+	//var followForce = sb_following_force();
+	return sb_flocking_force();
 }
