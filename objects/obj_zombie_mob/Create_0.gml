@@ -6,7 +6,7 @@
 //image_yscale = image_xscale;
 
 // Initializing position and velocity at start
-pos = Vector2d(phy_position_x, phy_position_y);
+pos = Vector2d(x, y);
 vel = Vector2d(0, 0);
 //vel = Vector2d(0, 0);
 force = Vector2d(0,0);
@@ -17,5 +17,7 @@ particles[psize] = id;
 psize++;
 
 //Set sight range to 4*(sprite_width*image_scale_x)
-sight_range = 4 * sprite_width;
+sight_range = 6 * sprite_width;
 
+max_speed = 7;
+max_force = 3;

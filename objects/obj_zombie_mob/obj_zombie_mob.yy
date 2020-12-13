@@ -11,7 +11,7 @@
     "name": "obj_particle",
     "path": "objects/obj_particle/obj_particle.yy",
   },
-  "physicsObject": true,
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 0,
   "physicsGroup": 2,
@@ -32,7 +32,9 @@
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"obj_zombie_mob","path":"objects/obj_zombie_mob/obj_zombie_mob.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"kfollow","path":"objects/obj_particle/obj_particle.yy",},"objectId":{"name":"obj_particle","path":"objects/obj_particle/obj_particle.yy",},"value":".4","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Objects",
     "path": "folders/Objects.yy",
