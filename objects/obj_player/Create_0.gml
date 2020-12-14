@@ -8,3 +8,5 @@ vel = Vector2d(0, 0);
 force = Vector2d(0,0);
 
 step_count = 0;
+
+phy_fixed_rotation = true;

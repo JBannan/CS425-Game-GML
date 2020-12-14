@@ -30,6 +30,8 @@ phy_position_y = pos[1];
 //x = pos[0];
 //y = pos[1];
 
+phy_rotation = -point_direction(0,0, vel[0], vel[1]);
+
 if (hp <= 0) {
 	instance_destroy(self);
 }

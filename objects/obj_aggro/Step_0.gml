@@ -28,6 +28,8 @@ if (nzsize > 0) {
 	phy_position_x = pos[0];
 	phy_position_y = pos[1];
 	
+	phy_rotation = -point_direction(0,0, vel[0], vel[1]) + 90;
+	
 	if (step_count % 180 == 0) {
 		nearby_zombies[|0].hp -= 10;
 	}

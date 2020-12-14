@@ -9,3 +9,5 @@ max_speed = 1;
 max_force = 1;
 
 step_count = 0;
+
+phy_fixed_rotation = true;
