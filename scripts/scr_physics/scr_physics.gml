@@ -1,8 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 globalvar particles, psize;
-globalvar h, step_count;
-step_count = 0;
+globalvar h;
+globalvar nearest_zombie;
+nearest_zombie = -1;
 globalvar k_align, k_coh, k_sep;
 h = 0.05;
 psize = 0;

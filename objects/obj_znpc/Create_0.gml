@@ -5,5 +5,7 @@ vel = Vector2d(0,0);
 force = Vector2d(0,0);
 
 sight_range = 120
-max_speed = 2;
+max_speed = 1;
 max_force = 1;
+
+step_count = 0;

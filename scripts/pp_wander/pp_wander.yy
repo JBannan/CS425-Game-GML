@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "path_finding",
+    "path": "folders/Scripts/path_finding.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_path_planning",
+  "name": "pp_wander",
   "tags": [],
   "resourceType": "GMScript",
 }
