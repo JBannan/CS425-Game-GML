@@ -9,3 +9,5 @@ The latest release exe can be found [here](https://github.com/JBannan/CS425-Game
 
 ## Gameplay Video
 [![CS425 Video Link](https://img.youtube.com/vi/rqsmUgt10fU/0.jpg)](https://www.youtube.com/watch?v=rqsmUgt10fU)
+
+*wll open in Youtube
